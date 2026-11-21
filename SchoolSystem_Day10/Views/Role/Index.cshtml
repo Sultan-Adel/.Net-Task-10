@@ -1,0 +1,17 @@
+@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>System Roles</h2>
+    <a asp-action="AddRole" class="btn btn-primary">+ Add Role</a>
+</div>
+
+<ul class="list-group">
+    @foreach (var role in Model)
+    {
+        <li class="list-group-item">@role</li>
+    }
+</ul>
